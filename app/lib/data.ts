@@ -189,8 +189,8 @@ export async function fetchCustomers() {
 
     const customers = data.rows;
     return customers;
-  } catch (err) {
-    console.error('Database Error:', err);
+  } catch (error) {
+    console.error('Database Error:', error);
     throw new Error('Failed to fetch all customers.');
   }
 }
@@ -223,8 +223,8 @@ export async function fetchFilteredCustomers(query: string) {
     }));
 
     return customers;
-  } catch (err) {
-    console.error('Database Error:', err);
+  } catch (error) {
+    console.error('Database Error:', error);
     throw new Error('Failed to fetch customer table.');
   }
 }
